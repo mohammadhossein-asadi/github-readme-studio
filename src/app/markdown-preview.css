@@ -1,0 +1,290 @@
+/* GitHub-flavoured Markdown preview.
+   Scoped so the preview can be light while the app is dark (and vice-versa). */
+
+.md-preview {
+  --md-fg: #1f2328;
+  --md-fg-muted: #59636e;
+  --md-bg: #ffffff;
+  --md-border: #d1d9e0;
+  --md-border-muted: #d8dee4;
+  --md-subtle: #f6f8fa;
+  --md-accent: #0969da;
+  --md-code-bg: #f6f8fa;
+  --md-quote: #59636e;
+  --md-success: #1a7f37;
+  --md-warning: #9a6700;
+  --md-danger: #d1242f;
+  --md-note: #0969da;
+  --md-tip: #1a7f37;
+  --md-important: #8250df;
+  --md-caution: #d1242f;
+
+  color: var(--md-fg);
+  background-color: var(--md-bg);
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.md-preview[data-md-theme="dark"] {
+  --md-fg: #f0f6fc;
+  --md-fg-muted: #9198a1;
+  --md-bg: #0d1117;
+  --md-border: #3d444d;
+  --md-border-muted: #3d444d;
+  --md-subtle: #151b23;
+  --md-accent: #4493f8;
+  --md-code-bg: rgba(101, 108, 118, 0.2);
+  --md-quote: #9198a1;
+  --md-success: #3fb950;
+  --md-warning: #d29922;
+  --md-danger: #f85149;
+  --md-note: #4493f8;
+  --md-tip: #3fb950;
+  --md-important: #ab7df8;
+  --md-caution: #f85149;
+}
+
+.md-preview > :first-child {
+  margin-top: 0 !important;
+}
+.md-preview > :last-child {
+  margin-bottom: 0 !important;
+}
+
+.md-preview h1,
+.md-preview h2,
+.md-preview h3,
+.md-preview h4,
+.md-preview h5,
+.md-preview h6 {
+  margin: 1.5rem 0 0.75rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-wrap: balance;
+  scroll-margin-top: 4rem;
+}
+.md-preview h1 {
+  font-size: 1.9rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--md-border-muted);
+}
+.md-preview h2 {
+  font-size: 1.45rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--md-border-muted);
+}
+.md-preview h3 {
+  font-size: 1.2rem;
+}
+.md-preview h4 {
+  font-size: 1rem;
+}
+.md-preview h5,
+.md-preview h6 {
+  font-size: 0.875rem;
+  color: var(--md-fg-muted);
+}
+
+.md-preview p {
+  margin: 0.85rem 0;
+  text-wrap: pretty;
+}
+.md-preview a {
+  color: var(--md-accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.md-preview a:hover {
+  text-decoration-thickness: 2px;
+}
+.md-preview strong {
+  font-weight: 600;
+}
+.md-preview hr {
+  height: 1px;
+  margin: 1.75rem 0;
+  border: 0;
+  background-color: var(--md-border-muted);
+}
+
+.md-preview ul,
+.md-preview ol {
+  margin: 0.75rem 0;
+  padding-left: 1.6rem;
+}
+.md-preview ul {
+  list-style: disc;
+}
+.md-preview ol {
+  list-style: decimal;
+}
+.md-preview li + li {
+  margin-top: 0.3rem;
+}
+.md-preview li > ul,
+.md-preview li > ol {
+  margin: 0.3rem 0;
+}
+
+.md-preview li.task-list-item {
+  list-style: none;
+  margin-left: -1.35rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.md-preview input[type="checkbox"] {
+  margin-top: 0.3rem;
+  accent-color: var(--md-accent);
+  pointer-events: none;
+}
+
+.md-preview blockquote {
+  margin: 1rem 0;
+  padding: 0 1rem;
+  color: var(--md-quote);
+  border-left: 0.25rem solid var(--md-border);
+}
+
+.md-preview code {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.85em;
+  padding: 0.2em 0.4em;
+  border-radius: 6px;
+  background-color: var(--md-code-bg);
+}
+.md-preview pre {
+  margin: 1rem 0;
+  padding: 0.9rem 1rem;
+  overflow-x: auto;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  background-color: var(--md-subtle);
+  border: 1px solid var(--md-border-muted);
+  border-radius: 8px;
+}
+.md-preview pre code {
+  padding: 0;
+  font-size: inherit;
+  background: transparent;
+  border-radius: 0;
+  white-space: pre;
+}
+
+.md-preview table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  margin: 1rem 0;
+  overflow: auto;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+.md-preview th,
+.md-preview td {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--md-border-muted);
+}
+.md-preview th {
+  font-weight: 600;
+  background-color: var(--md-subtle);
+}
+.md-preview tr:nth-child(2n) td {
+  background-color: color-mix(in srgb, var(--md-subtle) 60%, transparent);
+}
+
+.md-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.md-preview img.badge {
+  display: inline-block;
+  margin: 0 0.15rem 0.35rem 0;
+}
+
+/* Centered badge rows, matching GitHub's handling of <p align="center"> */
+.md-preview [align="center"],
+.md-preview [align="middle"] {
+  text-align: center;
+}
+.md-preview details {
+  margin: 1rem 0;
+  padding: 0.5rem 0.9rem;
+  border: 1px solid var(--md-border-muted);
+  border-radius: 6px;
+}
+.md-preview summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.md-preview .footnotes {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--md-border-muted);
+  font-size: 0.8125rem;
+  color: var(--md-fg-muted);
+}
+
+/* GitHub alerts: > [!NOTE] etc. */
+.md-preview .md-alert {
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  border-left: 0.25rem solid var(--md-alert-color);
+  border-radius: 6px;
+  background-color: color-mix(in srgb, var(--md-alert-color) 8%, transparent);
+}
+.md-preview .md-alert-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin: 0 0 0.25rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--md-alert-color);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+.md-preview .md-alert > p:last-child {
+  margin-bottom: 0;
+}
+
+/* Per-type alert colours, mirroring GitHub's callout palette */
+.md-preview .md-alert[data-alert="note"] { --md-alert-color: var(--md-note); }
+.md-preview .md-alert[data-alert="tip"] { --md-alert-color: var(--md-tip); }
+.md-preview .md-alert[data-alert="important"] { --md-alert-color: var(--md-important); }
+.md-preview .md-alert[data-alert="warning"] { --md-alert-color: var(--md-warning); }
+.md-preview .md-alert[data-alert="caution"] { --md-alert-color: var(--md-caution); }
+
+.md-preview .md-diagram-caption {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--md-fg-muted);
+}
+
+/* Mermaid / architecture diagram block */
+.md-preview .md-diagram {
+  margin: 1rem 0;
+  padding: 1rem;
+  border: 1px dashed var(--md-border);
+  border-radius: 8px;
+  background-color: var(--md-subtle);
+  overflow-x: auto;
+}
+.md-preview .md-diagram pre {
+  margin: 0;
+  border: 0;
+  background: transparent;
+  padding: 0;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
