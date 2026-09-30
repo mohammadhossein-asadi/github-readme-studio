@@ -18,7 +18,9 @@ editor with live GitHub-flavored preview, and publish — as a commit or a pull 
 
 <br/>
 
-<img src="docs/screenshots/landing-dark.png" alt="GitHub README Studio landing page in dark mode" width="100%" />
+<img src="docs/demo.gif" alt="Demo: queueing repositories, running the five-stage analysis, editing sections and markdown source, checking the live preview, and opening a pull request from the publish dialog" width="100%" />
+
+<p><sub>Queue repositories → five-stage analysis → section editing &amp; markdown source → live preview → publish as a pull request.</sub></p>
 
 </div>
 
