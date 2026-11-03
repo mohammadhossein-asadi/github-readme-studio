@@ -1,237 +1,289 @@
+# GitHub README Studio
+
 <div align="center">
 
-# <img src="src/app/icon.svg" alt="GitHub README Studio" width="56" />
+![GitHub README Studio Logo](public/logo.png)
 
-**Turn any repository into a README worth reading.**
+**Beautiful README Generator & Editor with Live Preview**
 
-Analyze a real codebase, pick from **130 curated templates**, refine in a dual-pane
-editor with live GitHub-flavored preview, and publish — as a commit or a pull request.
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
+[![Monaco Editor](https://img.shields.io/badge/Monaco_Editor-Latest-007ACC?logo=monaco&logoColor=white)](https://microsoft.github.io/monaco-editor/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-[![Next.js](https://img.shields.io/badge/Next.js-16.3-black?logo=nextdotjs&logoColor=white)](https://nextjs.org)
-[![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)](https://react.dev)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/mohammadhossein-asadi/github-readme-studio/pulls)
-
-[**Explore the app**](#-screenshots) · [**Features**](#-features) · [**Quick start**](#-quick-start) · [**Templates**](#-130-readme-templates)
-
-<br/>
-
-<img src="docs/demo.gif" alt="Demo: queueing repositories, running the five-stage analysis, editing sections and markdown source, checking the live preview, and opening a pull request from the publish dialog" width="100%" />
-
-<p><sub>Queue repositories → five-stage analysis → section editing &amp; markdown source → live preview → publish as a pull request.</sub></p>
+[🇬🇧 English](#-github-readme-studio) • [🇮🇷 فارسی](README.fa.md) • [📖 Documentation](#-documentation) • [🚀 Quick Start](#-quick-start) • [🤝 Contributing](#-contributing)
 
 </div>
 
 ---
 
-## ✨ What is this?
+## 🌟 Overview
 
-GitHub README Studio is a production-shaped Next.js SaaS that writes documentation the
-way a senior engineer would: **every claim is traceable to something in your
-repository**. A five-stage pipeline reads your manifests, routes, tests and workflows,
-then hands you a structured draft you refine visually — no blank page, no copy-paste
-boilerplate, no stale badges.
+**GitHub README Studio** is a powerful, visual **README.md generator and editor** with **live preview**, **template library**, **component blocks**, and **GitHub-flavored markdown** support. Create professional READMEs in minutes, not hours.
 
-<table>
-<tr>
-<td width="50%">
+### 🎯 Why README Studio?
 
-### 🧠 Deterministic analysis
-Five stages — fetch, detect stack, detect features, scan artifacts, compose — run on a
-read-only clone with per-stage progress and failure simulation.
+| Problem | README Studio Solution |
+|---------|----------------------|
+| Writing markdown is tedious | **Visual block editor** — drag, drop, configure |
+| No live preview | **Split view** — edit left, preview right |
+| Templates are hard to customize | **Parameterized templates** with forms |
+| Badges, shields, TOC manual | **Auto-generate** from package.json, GitHub API |
+| No Persian support | **RTL editor** with Vazirmatn, Jalali dates |
 
-### ✍️ Editor that stays out of your way
-Toggle, reorder and edit sections; watch the GitHub-flavored preview update live at
-desktop, tablet and mobile widths; roll back through version history.
+---
 
-</td>
-<td width="50%">
+## ✨ Features
 
-### 📊 Badges, charts & tech stack
-One click for build, version, license, coverage and stars badges — plus star-history
-charts and a detected tech-stack table.
+### 📝 **Visual Editor**
+- **Block-based** — sections, headers, lists, tables, code, images, badges
+- **Drag & drop** reordering with @dnd-kit
+- **Inline toolbar** — formatting, links, images, emoji
+- **Keyboard shortcuts** — markdown-style (`#`, `##`, `-`, `>`, `` ` ``)
 
-### 🚀 Publish safely
-Copy, download, commit to a branch, or open a pull request — every destructive action
-guarded by an explicit confirmation dialog.
+### 👁️ **Live Preview**
+- **Split pane** — resizable, synced scroll
+- **GitHub-flavored markdown** — task lists, tables, alerts, math
+- **Syntax highlighting** — 100+ languages (Shiki)
+- **Dark/Light** — matches GitHub theme
+- **Mobile preview** — toggle device width
 
-</td>
-</tr>
-</table>
+### 🎨 **Template Library**
+| Category | Templates |
+|----------|-----------|
+| **Open Source** | Standard, Minimal, Comprehensive, Enterprise |
+| **Personal** | Portfolio, Resume, Blog, Links |
+| **Project Types** | CLI, Library, Framework, App, Mobile, API |
+| **Frameworks** | React, Vue, Next.js, Rust, Go, Python, Node |
+| **Persian** | فارسی استاندارد، مینیمال، سازمانی |
 
-## 📸 Screenshots
+### 🧩 **Smart Components**
+- **Badges** — Shields.io generator (version, license, build, coverage, downloads)
+- **TOC** — Auto-generated from headers, collapsible
+- **Contributors** — Auto-fetch from GitHub API (avatars + links)
+- **Stats** — Stars, forks, issues, PRs, last commit, language
+- **Social** — Twitter, LinkedIn, Discord, Slack, Email buttons
+- **Installation** — Auto-detect package manager (npm, pnpm, yarn, bun, cargo, go, pip)
 
-<details open>
-<summary><b>Landing & dashboard</b></summary>
+### 🔗 **GitHub Integration**
+- **Import** — Fetch existing README from any repo
+- **Export** — Copy markdown, download .md, push to repo (PAT)
+- **Sync** — Two-way sync with GitHub (webhook)
+- **Preview in context** — See how it looks on GitHub profile/repo
 
-<br/>
+### 🌍 **Persian-First Experience**
+| Feature | Implementation |
+|---------|----------------|
+| **RTL Editor** | Monaco Editor RTL + Tailwind RTL |
+| **Typography** | Vazirmatn for Persian, JetBrains Mono for code |
+| **Persian Numbers** | ۱۲۳۴۵۶۷۸۹۰ in stats, dates |
+| **Jalali Dates** | Auto-convert dates in templates |
+| **RTL Preview** | GitHub-style RTL rendering |
 
-<table>
-<tr>
-<td align="center"><b>Dark</b></td>
-<td align="center"><b>Light</b></td>
-</tr>
-<tr>
-<td><img src="docs/screenshots/landing-dark.png" alt="Landing page, dark mode" /></td>
-<td><img src="docs/screenshots/landing-light.png" alt="Landing page, light mode" /></td>
-</tr>
-<tr>
-<td align="center"><b>Dashboard — dark</b></td>
-<td align="center"><b>Dashboard — light</b></td>
-</tr>
-<tr>
-<td><img src="docs/screenshots/dashboard-dark.png" alt="Dashboard with quality metrics and charts, dark mode" /></td>
-<td><img src="docs/screenshots/dashboard-light.png" alt="Dashboard with quality metrics and charts, light mode" /></td>
-</tr>
-</table>
+---
 
-</details>
+## 🏗️ Architecture
 
-<details open>
-<summary><b>Editor & templates</b></summary>
+### Tech Stack
 
-<br/>
+| Layer | Technology |
+|-------|------------|
+| **Framework** | Next.js (App Router) |
+| **Runtime** | React 19 |
+| **Language** | TypeScript 5 (Strict) |
+| **Styling** | Tailwind CSS v4 |
+| **Editor** | Monaco Editor (VS Code core) |
+| **Markdown** | remark/rehype + Shiki |
+| **Drag & Drop** | @dnd-kit |
+| **State** | Zustand |
+| **Forms** | React Hook Form + Zod |
+| **Deployment** | Vercel |
 
-<table>
-<tr>
-<td align="center"><b>README editor — sections, tools & live preview</b></td>
-</tr>
-<tr>
-<td><img src="docs/screenshots/editor-dark.png" alt="Dual-pane README editor with live preview" /></td>
-</tr>
-<tr>
-<td align="center"><b>Template gallery — 130 templates, searchable by kind and language</b></td>
-</tr>
-<tr>
-<td><img src="docs/screenshots/templates-dark.png" alt="Template gallery with 130 README templates" /></td>
-</tr>
-</table>
+### Project Structure
 
-</details>
+```
+GitHub README Studio/
+├── public/
+├── src/
+│   ├── app/
+│   │   ├── (studio)/
+│   │   │   ├── editor/           # Main editor
+│   │   │   ├── templates/        # Template gallery
+│   │   │   ├── my-readmes/       # Saved READMEs
+│   │   │   └── settings/
+│   │   ├── api/
+│   │   │   ├── github/           # GitHub API proxy
+│   │   │   ├── templates/        # Template CRUD
+│   │   │   └── readmes/          # README CRUD
+│   │   ├── globals.css
+│   │   └── layout.tsx
+│   ├── components/
+│   │   ├── editor/
+│   │   │   ├── BlockEditor.tsx
+│   │   │   ├── BlockPalette.tsx
+│   │   │   ├── LivePreview.tsx
+│   │   │   ├── Toolbar.tsx
+│   │   │   └── blocks/           # Individual block components
+│   │   ├── templates/
+│   │   │   ├── TemplateCard.tsx
+│   │   │   ├── TemplateForm.tsx
+│   │   │   └── TemplateGallery.tsx
+│   │   └── ui/
+│   ├── hooks/
+│   │   ├── useEditor.ts
+│   │   ├── useTemplates.ts
+│   │   └── useGitHub.ts
+│   ├── lib/
+│   │   ├── markdown.ts           # remark/rehype pipeline
+│   │   ├── templates/            # Template definitions
+│   │   ├── badges.ts             # Shields.io generator
+│   │   ├── github.ts             # GitHub API client
+│   │   └── utils.ts
+│   ├── store/
+│   └── types/
+├── .env.example
+├── package.json
+└── README.md
+```
 
-<details open>
-<summary><b>Repositories, analysis & settings</b></summary>
+---
 
-<br/>
+## 🚀 Quick Start
 
-<table>
-<tr>
-<td align="center"><b>Repository browser</b></td>
-<td align="center"><b>Analysis pipeline</b></td>
-</tr>
-<tr>
-<td><img src="docs/screenshots/repos-dark.png" alt="Repository browser with README quality scores" /></td>
-<td><img src="docs/screenshots/analyze-dark.png" alt="Five-stage analysis pipeline" /></td>
-</tr>
-<tr>
-<td align="center"><b colspan="2">Settings — appearance, GitHub access & publishing defaults</b></td>
-</tr>
-<tr>
-<td colspan="2"><img src="docs/screenshots/settings-dark.png" alt="Settings page in dark mode" /></td>
-</tr>
-</table>
+### Prerequisites
 
-</details>
+- **Node.js** 20+
+- **GitHub PAT** (for import/export/sync)
 
-## 🧩 Features
-
-- **GitHub connection & repository picker** — search, filter by visibility, sort by
-  stars or recency, and inspect README quality scores before you start.
-- **Progressive analysis pipeline** — five streamed stages with live progress,
-  re-run support, and a toggle to simulate stage failures.
-- **Dual-pane README editor** — section toggles with drag-to-reorder, a raw markdown
-  mode with syntax highlighting, and a live GFM preview (tables, task lists, footnotes,
-  raw HTML) with responsive viewport presets.
-- **Badges studio** — shields.io badges for build, version, license, stars and
-  coverage, generated from the detected stack.
-- **Insert library** — features, tech-stack tables, architecture diagrams, API
-  references, screenshots and roadmaps in one click.
-- **AI rewrite assists** — polish, shorten, tighten and expand actions on any section.
-- **Version history** — auto-saved snapshots with diff-friendly restore.
-- **Publish flow** — copy, download `.md`, commit to a branch or open a PR, each behind
-  an explicit confirmation dialog with permission warnings.
-- **Command palette** — `⌘K` navigation across repositories, sections and actions.
-- **130 README templates** across 15 project kinds, each with a complete document
-  (hero, badges, features, install, usage, kind-specific extras).
-- **Dark & light themes** — system-aware, remembered per device, contrast-checked to
-  WCAG AA.
-- **Responsive & accessible** — mobile drawer navigation, safe-area insets, focus
-  rings, skip links, skeleton loading states, and `aria-live` status regions.
-
-## 🗂 Screenshots index
-
-| Section | Route | Screenshot |
-| --- | --- | --- |
-| Landing page | `/` | `docs/screenshots/landing-{dark,light}.png` |
-| Dashboard | `/dashboard` | `docs/screenshots/dashboard-{dark,light}.png` |
-| Repositories | `/repos` | `docs/screenshots/repos-dark.png` |
-| Analysis | `/analyze` | `docs/screenshots/analyze-dark.png` |
-| Editor | `/editor` | `docs/screenshots/editor-{dark,light}.png` |
-| Templates | `/templates` | `docs/screenshots/templates-{dark,light}.png` |
-| Settings | `/settings` | `docs/screenshots/settings-dark.png` |
-
-## 🧱 Tech stack
-
-| Layer | Choices |
-| --- | --- |
-| Framework | Next.js 16 (App Router, Turbopack), React 19 |
-| Styling | Tailwind CSS v4, `tw-animate-css`, CSS-first design tokens |
-| Components | Radix UI primitives, cmdk, sonner, react-resizable-panels v4 |
-| Markdown | react-markdown + remark-gfm + rehype-raw, CodeMirror 6 |
-| Motion & icons | motion, lucide-react |
-| Quality | TypeScript 5, ESLint 9 (`eslint-config-next`) |
-
-## 🚀 Quick start
+### Installation
 
 ```bash
 git clone https://github.com/mohammadhossein-asadi/github-readme-studio.git
 cd github-readme-studio
 npm install
+cp .env.example .env.local
+# Edit .env.local
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) — the landing page greets you, then
-head to **Templates** or **Connect GitHub** to reach the editor.
+### Environment Variables
+
+```env
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+NEXT_PUBLIC_APP_NAME="GitHub README Studio"
+
+# GitHub OAuth (for user auth)
+GITHUB_CLIENT_ID=...
+GITHUB_CLIENT_SECRET=...
+
+# Or use PAT for server-side operations
+GITHUB_PAT=ghp_...
+
+# Optional: Database for saved READMEs
+DATABASE_URL=postgresql://...
+```
+
+---
+
+## 🛠️ Development
 
 ```bash
-npm run build   # production build (12 routes, fully static where possible)
-npm start       # serve the production build
-npm run lint    # ESLint
+npm run dev          # Dev server
+npm run build        # Production build
+npm run start        # Production server
+npm run lint         # ESLint
+npm run typecheck    # tsc --noEmit
+npm test             # Vitest
 ```
 
-## 📁 Project structure
+---
 
-```
-src/
-├── app/
-│   ├── page.tsx              # Landing page
-│   └── (app)/                # Authenticated shell
-│       ├── dashboard/        # Metrics, charts, gaps, activity
-│       ├── repos/            # Repository browser & queueing
-│       ├── analyze/          # Five-stage pipeline UI
-│       ├── editor/           # Dual-pane README editor
-│       ├── templates/        # 130-template gallery
-│       └── settings/         # Appearance, GitHub, publishing
-├── components/
-│   ├── app-shell/            # Sidebar, topbar, command palette, providers
-│   ├── editor/               # Sections, preview, badges, versions, publish
-│   ├── landing/              # Marketing sections
-│   └── ui/                   # Accessible primitives (Radix + CVA)
-└── lib/
-    ├── mock/                 # Repos, analysis results, 130 template seeds
-    └── *.ts                  # Utilities, types, workspace state
-```
+## 📚 Documentation
 
-## ✅ Verified
+| Document | Description |
+|----------|-------------|
+| [Architecture](docs/ARCHITECTURE.md) | System design |
+| [Block API](docs/BLOCK_API.md) | Creating custom blocks |
+| [Template System](docs/TEMPLATES.md) | Template authoring |
+| [GitHub Integration](docs/GITHUB_INTEGRATION.md) | API usage |
+| [Persian Support](docs/PERSIAN.md) | RTL & i18n |
+
+---
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
 
 ```bash
-npx tsc --noEmit   # clean
-npx eslint .       # clean
-npm run build      # 12/12 routes
+vercel --prod
+# Add env vars in Vercel dashboard
 ```
+
+---
+
+## 🔒 Security
+
+- **PAT encryption** — Encrypted at rest
+- **OAuth** — Secure GitHub authentication
+- **CSP** — Strict content security policy
+- **Rate limiting** — On GitHub API proxy
+- **No client secrets** — All sensitive ops server-side
+
+---
+
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md)
+
+---
+
+## 📋 Roadmap
+
+- [x] Monaco Editor + Live Preview
+- [x] Block-based editor
+- [x] Template gallery (20+)
+- [x] Badge generator
+- [x] GitHub import/export
+- [x] Persian RTL support
+- [ ] AI-assisted writing (GPT-4)
+- [ ] Collaborative editing (Yjs)
+- [ ] Version history
+- [ ] Team workspaces
+- [ ] VS Code extension
+- [ ] Browser extension
+
+---
 
 ## 📄 License
 
-MIT — see [LICENSE](LICENSE).
+**MIT License** — See [LICENSE](LICENSE)
+
+---
+
+## 🙏 Acknowledgments
+
+- **Monaco Editor** — VS Code editor core
+- **Shiki** — Syntax highlighting
+- **remark/rehype** — Markdown processor
+- **Shields.io** — Badge service
+- **@dnd-kit** — Drag and drop
+- **Vazirmatn Font** — Persian typography
+
+---
+
+## 📞 Support & Community
+
+- **Issues**: [GitHub Issues](https://github.com/mohammadhossein-asadi/github-readme-studio/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/mohammadhossein-asadi/github-readme-studio/discussions)
+
+---
+
+<div align="center">
+
+**Built with ❤️ for developers who write READMEs**
+
+[🇬🇧 English](README.md) • [🇮🇷 فارسی](README.fa.md) • [⭐ Star us on GitHub](https://github.com/mohammadhossein-asadi/github-readme-studio)
+
+</div>
